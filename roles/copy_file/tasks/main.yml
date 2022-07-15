@@ -1,0 +1,23 @@
+---
+- name: delete site dir
+  command:
+      cmd: /usr/local/hestia/bin/v-delete-web-domain {{ dest_web_user }} {{ domain }}
+
+- name: Create site in Hestia
+  command:
+      cmd: /usr/local/hestia/bin/v-add-web-domain {{ dest_web_user }} {{ domain }}
+      
+
+#- name: Copy file
+#  synchronize:
+#        src: 'stlark@stlark.beget.tech:{{ src_site_dir }}'
+#        dest: '{{ dest_site_dir }}'
+#        rsync_path: /usr/bin/rsync
+
+- name: find database
+  
+
+
+- name: Copy file
+  command:
+      cmd: /usr/bin/rsync -avz stlark@stlark.beget.tech:{{ src_site_dir }} {{ dest_site_dir }}

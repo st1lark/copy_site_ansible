@@ -1,0 +1,9 @@
+---
+
+ansible_python_interpreter: /usr/bin/python3
+ansible_user: root
+src_web_user: stlark
+src_site_dir: /home/s/stlark/copy.stlark.ru/public_html/
+dest_web_user: user
+domain: busy.stlark.ru
+dest_site_dir: /home/user/web/{{ domain }}/public_html
